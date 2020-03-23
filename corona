@@ -76,6 +76,7 @@ def cunt():
 			i = str(i)
 			file.write(i)
 			file.close()
+		os.system('ssh-add /home/lawlie8/github1')
 		os.system('git add -A && git commit -m "update"')
 		os.system('git push')
 	except:
