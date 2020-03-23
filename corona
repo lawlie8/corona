@@ -69,9 +69,9 @@ def cunt():
 		
 		break
 	try:
-		file = open('corona.html','w+')
+		file = open('index.html','w+')
 		file.close()
-		file = open('corona.html','a+')
+		file = open('index.html','a+')
 		for i in lIst:
 			i = str(i)
 			file.write(i)
