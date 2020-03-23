@@ -76,7 +76,7 @@ def cunt():
 			i = str(i)
 			file.write(i)
 			file.close()
-		os.system('ftp -n < fileup')
+		os.system('git commit -m "update"')
 	except:
 		sys.stdout.write('error at file upload')
 cunt()
