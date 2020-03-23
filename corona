@@ -34,6 +34,8 @@ finally:
 	from bs4 import BeautifulSoup
 
 def cunt():
+	billy = ''' <a href='https://www.symptoma.es/'>https://www.symptoma.es/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7ada45dff3629d875092bed977daf886f09027c8'></script>
+	<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/653335/t/2"></script>'''
 	link = r'https://www.worldometers.info/coronavirus/'
 	text = requests.get(link).text
 	source = BeautifulSoup(text,features='html.parser')
@@ -75,7 +77,9 @@ def cunt():
 		for i in lIst:
 			i = str(i)
 			file.write(i)
-			file.close()
+			
+		file.write(billy)
+		file.close()
 		os.system('ssh-add /home/lawlie8/github1')
 		os.system('git add -A && git commit -m "update"')
 		os.system('git push')
