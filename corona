@@ -77,7 +77,7 @@ def cunt():
 			file.write(i)
 			file.close()
 		os.system('git add -A && git commit -m "update"')
-		os.system('')
+		os.system('git push')
 	except:
 		sys.stdout.write('error at file upload')
 cunt()
