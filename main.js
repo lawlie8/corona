@@ -118,3 +118,10 @@ for (var i = 0; i < array.length; i++) {
 
 
 }
+
+function download_resume(){
+
+
+document.getElementById('download2').click();
+
+}

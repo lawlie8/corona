@@ -97,16 +97,20 @@ transform: translate(-50%,-50%);
 
 
 div.main_window{
-  scroll-behavior: auto;
-  display: none;
-position: absolute;
+overflow-y: auto;
+scrollbar-width:none;
+scroll-behavior: auto;
+display: none;
+position: relative;
 background-image: url('../images/bg1.jpeg');
 z-index: 111;
 background-size: cover;
 width: 100%;
 color: black;
 height: 100%;
+
 }
+
 
 .main_window h1{
 position:absolute;
@@ -115,7 +119,7 @@ left: 50%;
 transform: translate(-50%,-50%);
 padding-bottom: 30px;
 border-bottom:2px black double;
-width: 500px;
+width: 50%;
 text-align: center;
 }
 
@@ -124,7 +128,7 @@ position:absolute;
 top: 30%;
 left: 50%;
 transform: translate(-50%,-50%);
-width: 500px;
+width: 50%;
 text-align: center;
 }
 
@@ -187,9 +191,12 @@ color: yellow;
   position: fixed;
   top: 50px;
   left: 85%;
+  margin-right: 5%;
 }
 
 .social_icons li{
+  margin-right: 5%;
+
 padding-bottom: 20px;
 list-style: none;
 #float: left;
@@ -199,16 +206,17 @@ list-style: none;
   display: none;
 position: fixed;
 top: 50px;
-left: 20px;
+left: 3%;
 z-index: 111;
 }
+
 .tab_class li{
-#  padding-bottom: 50px;
+# padding-bottom: 50px;
   margin-bottom: 30px;
   list-style: none;
-  align:center;
   border-radius: 50px;
 }
+
 .tab_class li:nth-child(2){
 #  padding-bottom: 50px;
   margin-bottom: 50px;
@@ -218,6 +226,16 @@ z-index: 111;
   border-radius: 50px;
 
 }
+.tab_class li:nth-child(3){
+#  padding-bottom: 50px;
+  margin-bottom: 50px;
+  margin-left: 5px;
+  list-style: none;
+  align:center;
+  border-radius: 50px;
+
+}
+
 
 /*
 .tab_class li:hover{
@@ -237,6 +255,7 @@ color: white;
 transition: all ease .5s;
 position: absolute;
 top: 50%;
+transition: all ease .5s;
 left: 50%;
 transform: translate(-50%,-50%);
 height: 80%;
