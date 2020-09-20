@@ -1,0 +1,273 @@
+body{
+  filter: blur(px);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+html{
+  height: 100%;
+  width: 100%;
+
+background-color:  #001a33;
+}
+
+canvas{
+  margin-left: -5px;
+  margin-top: -5px;
+  //filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+  box-shadow: 1px 2px 3px black;
+  filter: blur(5px);
+  display: block;
+  transform: scale(1.2);
+  z-index: -11;
+  background-color: #001a33;
+
+}
+/*
+div.bar_1{
+  font-size: 120%;
+  font-family: sans-serif;
+  position:absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  z-index: 1;
+}*/
+.logo_start{
+  position: absolute;
+  height: 80%;
+  width: 30%;
+  top: 20%;
+  left: 10%;
+  z-index: 111;
+}
+
+.logo_start img{
+  padding-top: 20px;
+height: 50px;
+width: 50px;
+}
+
+.logo_start img:hover{
+  padding-top: 20px;
+height: 60px;
+width: 60px;
+transition: 0.3s ease all;
+}
+
+.about{
+  height: 30%;
+  width: 30%;
+  font-family: sans-serif;
+  border-radius: 1px;
+  background-color: #ffff99;
+  padding:5px 5px;
+  color: black;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.click_me button{
+//display:none;
+background-color: green;
+position: absolute;
+height: 20%;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 30%;
+border: none;
+}
+
+.about h1,p,h2{
+position: relative;
+left: 50%;
+top:40%;
+text-align: center;
+transform: translate(-50%,-50%);
+}
+
+
+div.main_window{
+  scroll-behavior: auto;
+  display: none;
+position: absolute;
+background-image: url('../images/bg1.jpeg');
+z-index: 111;
+background-size: cover;
+width: 100%;
+color: black;
+height: 100%;
+}
+
+.main_window h1{
+position:absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%,-50%);
+padding-bottom: 30px;
+border-bottom:2px black double;
+width: 500px;
+text-align: center;
+}
+
+.main_window h2{
+position:absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 500px;
+text-align: center;
+}
+
+.main_window p{
+position:absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 500px;
+text-align: center;
+}
+
+
+.profile_pic{
+position: absolute;
+top: 50%;
+left: 25%;
+padding: 20px;
+background-color:rgba(0,0,0,.5);
+width: 180px;
+color: white;
+}
+
+.brief_intro{
+text-align: left;
+position: absolute;
+top: 50%;
+left: 45%;
+color: white;
+font-family: sans-serif;
+padding: 20px;
+background-color:rgba(0, 0, 0,.5);/*rgba(194,194,163,.5);*/
+width: 350px;
+height: 204px;
+}
+
+/*
+
+.brief_intro p{
+position:absolute;
+left: 70px;
+top: 7px;
+}
+*/
+.brief_intro a{
+text-decoration: none;
+color: yellow;
+
+}
+
+.github_profile{
+  display: none;
+  position: absolute;
+  top: 800px;
+  left: 25%;
+}
+.social_icons{
+  display: none;
+  z-index: 1111;
+  position: fixed;
+  top: 50px;
+  left: 85%;
+}
+
+.social_icons li{
+padding-bottom: 20px;
+list-style: none;
+#float: left;
+}
+
+.tab_class{
+  display: none;
+position: fixed;
+top: 50px;
+left: 20px;
+z-index: 111;
+}
+.tab_class li{
+#  padding-bottom: 50px;
+  margin-bottom: 30px;
+  list-style: none;
+  align:center;
+  border-radius: 50px;
+}
+.tab_class li:nth-child(2){
+#  padding-bottom: 50px;
+  margin-bottom: 50px;
+  margin-left: 5px;
+  list-style: none;
+  align:center;
+  border-radius: 50px;
+
+}
+
+/*
+.tab_class li:hover{
+  list-style: none;
+  transition: all ease .5s;
+  background-color: white;
+  border-radius: 50px;
+}
+*/
+.project_intro{
+overflow-y:auto;
+scroll-behavior:auto;
+scrollbar-width:none;
+font-family: sans-serif;
+padding: 10px;
+color: white;
+transition: all ease .5s;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+height: 80%;
+width: 70%;
+background-color: rgba(0, 0, 0,.5);
+z-index: 1111;
+display: none;
+}
+
+
+.project_intro a{
+  text-decoration: none;
+  left: auto;
+  position: relative;
+  margin-bottom: none;
+  color: yellow;
+}
+.project_intro h2{
+position: relative;
+margin-bottom: 5px;
+text-align: left;
+}
+
+.project_li{
+  padding: 10px;
+  background-color: rgba(0, 0, 0,.3);
+  list-style: none;
+  float: top;
+  margin-right: 20px;
+  position: relative;
+  left: 5%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
