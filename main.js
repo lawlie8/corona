@@ -70,6 +70,7 @@ greetings1(i);
 var requestId = 0;
 draw(requestId)
 function start1(){
+
 document.getElementById('click_me').style.display = 'block';
   console.log('start1');
   cancelAnimationFrame(draw);
@@ -86,10 +87,12 @@ document.getElementById('click_me').style.display = 'none';
 document.getElementById('main_window').style.display = 'block';
 document.getElementById('tab_class').style.display = 'block';
 document.getElementById('social_icons').style.display = 'block';
+resolution();
 
 }
 
 function info_show(){
+dont_show_menu();
   var array = ['main_window_name','profile_pic','brief_intro'];
   for (var i = 0; i < array.length; i++) {
     document.getElementById(array[i]).style.display = 'block';
@@ -102,12 +105,14 @@ function info_show(){
 
   }
 
-
+resolution();
 //document.getElementById('brief_intro').style.display = 'block';
 
 }
 
 function project_show(){
+  resolution();
+  dont_show_menu();
 var array = ['main_window_name','profile_pic','brief_intro'];
 for (var i = 0; i < array.length; i++) {
   document.getElementById(array[i]).style.display = 'none';
@@ -120,8 +125,102 @@ for (var i = 0; i < array.length; i++) {
 }
 
 function download_resume(){
-
-
 document.getElementById('download2').click();
+dont_show_menu();
+}
 
+
+function resolution() {
+var width = window.innerWidth;
+if(width <=880){
+
+  document.getElementById('social_icons').style.top = '5px';
+  document.getElementById('social_icons').style.left = '50%';
+  document.getElementById('social_icons').style.transform = 'translate(-50%)';
+  document.getElementById('tab_class').style.display='none';
+  document.getElementById('menu_icon').style.display='block';
+  document.getElementById('project_intro').style.top='60%';
+  document.getElementById('project_intro').style.width='90%';
+  document.getElementById('brief_intro').style.display='none';
+  document.getElementById('profile_pic').style.left  = '50%';
+  document.getElementById('profile_pic').style.transform = 'translate(-50%)';
+  document.getElementById('project_intro').style.position='absolute';
+
+  var lis = document.getElementById('social_icons').getElementsByTagName('ul');//.style.display = 'none';
+  for (var i=0; i<lis.length; i++) {
+  // Get all <a> children of each <li>
+  var atags = lis[i].getElementsByTagName('li');
+  for (var a = 0; a<atags.length; a++) {
+    // And set their color in a loop.
+    atags[a].style.cssFloat = 'left';
+    atags[a].style.margin = '5px';
+    atags[a].style.position = 'relative';
+
+    // or change some other property
+    //atags[a].style.height = '25%';
+  }
+}
+
+}
+else{
+  document.getElementById('social_icons').style.top = '50px';
+  document.getElementById('social_icons').style.left = '85%';
+  document.getElementById('tab_class').style.display='block';
+  document.getElementById('end_links').style.display='none';
+  document.getElementById('menu_icon').style.display='none';
+  document.getElementById('brief_intro').style.left  = '45%';
+  document.getElementById('brief_intro').style.display  = 'block';
+
+  document.getElementById('profile_pic').style.left  = '25%';
+  document.getElementById('profile_pic').style.transform = 'translate(0%)';
+
+  var lis = document.getElementById('social_icons').getElementsByTagName('ul');//.style.display = 'none';
+  for (var i=0; i<lis.length; i++) {
+  // Get all <a> children of each <li>
+  var atags = lis[i].getElementsByTagName('li');
+  for (var a = 0; a<atags.length; a++) {
+    // And set their color in a loop.
+    atags[a].style.cssFloat = 'none';
+
+    // or change some other property
+    //atags[a].style.height = '25%';
+  }
+
+}
+console.log(width)
+
+}
+}
+
+
+setTimeout(function() { resolution() },1000);
+
+function show_menu(flag){
+document.getElementById('end_links').style.display = 'block';
+document.getElementById('menu_icon').style.left  = '200px';
+document.getElementById('menu_icon').style.top  = '35px';
+document.getElementById('menu_icon').style.zIndex  = '1';
+document.getElementById('project_intro').style.zIndex  = '1110';
+
+var array = ['project_intro','tab_class','main_window_name','brief_intro','profile_pic'];
+
+for (var i = 0; i < array.length; i++) {
+  document.getElementById(array[i]).style.display  = 'none';
+
+}
+
+}
+function show_intro(){
+  document.getElementById('brief_intro').style.display = 'block';
+  document.getElementById('brief_intro').style.top   = '50%';
+  document.getElementById('brief_intro').style.left   = '50%';
+  document.getElementById('brief_intro').style.transform  = 'translate(-50%)';
+
+  document.getElementById('end_links').style.display  = 'none';
+  document.getElementById('menu_icon').style.left  = '0px';
+}
+
+function dont_show_menu(flag){
+  document.getElementById('menu_icon').style.left  = '0px';
+document.getElementById('end_links').style.display = 'none';
 }

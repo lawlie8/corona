@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Portfolio</title>
   </head>
-  <body >
+  <body onresize="resolution()" >
     <canvas id="canvas"></canvas>
 
   </body>
@@ -45,8 +45,18 @@ Expected Year Of Graduation : 2021<br><br>
 Hobbies : Movies and Reading Books and yes Taking B&W Pictures.
 </div>
 </li>
-<div class="end_links">
 
+<img onclick="show_menu()" ondblclick="dont_show_menu()" id="menu_icon" src="images/menu.svg" alt="" height="30" width="30">
+
+<div class="end_links" id="end_links">
+
+<ul>
+  <li onclick="info_show()">Info</li>
+  <li onclick="project_show()">Projects</li>
+  <li onclick="download_resume()">Resume</li>
+  <li onclick="show_intro()">about me</li>
+
+</ul>
 </div>
 
 </div>
@@ -59,10 +69,10 @@ Hobbies : Movies and Reading Books and yes Taking B&W Pictures.
 </div>
 <div class="social_icons" id="social_icons">
 <ul>
-  <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/keshav-katkar-2783411ab/"><img src="images/linkedin.svg" height="30" width="30" alt=""> </li></a>
-  <li><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/lawlie8"><img src="images/github.svg" height="30" width="30" alt=""> </li></a>
-  <li><a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/KatkarKeshav"> <img src="images/twitter.svg" height="30" width="30" alt=""> </li></a>
-  <li><a target="_blank" rel="noopener noreferrer" href="mailto: l.lawlie8@gmail.com"> <img src="images/mail.png" height="30" width="30" alt=""> </li></a>
+  <li ><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/keshav-katkar-2783411ab/"><img src="images/linkedin.svg" height="30" width="30" alt=""> </li></a>
+  <li ><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/lawlie8"><img src="images/github.svg" height="30" width="30" alt=""> </li></a>
+  <li ><a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/sockdontfit"> <img src="images/twitter.svg" height="30" width="30" alt=""> </li></a>
+  <li ><a target="_blank" rel="noopener noreferrer" href="mailto: l.lawlie8@gmail.com"> <img src="images/mail.png" height="30" width="30" alt=""> </li></a>
 
 </ul>
 
