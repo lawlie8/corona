@@ -86,12 +86,16 @@ document.getElementById('about').style.display = 'none';
 document.getElementById('click_me').style.display = 'none';
 document.getElementById('main_window').style.display = 'block';
 document.getElementById('tab_class').style.display = 'block';
+var tab_class_flag =1 ;
 document.getElementById('social_icons').style.display = 'block';
-resolution();
+resolution(tab_class);
 
 }
 
 function info_show(){
+
+  //document.getElementById('brief_intro').style.transform = 'translate(50%)';
+
 dont_show_menu();
   var array = ['main_window_name','profile_pic','brief_intro'];
   for (var i = 0; i < array.length; i++) {
@@ -153,7 +157,7 @@ if(width <=880){
   for (var a = 0; a<atags.length; a++) {
     // And set their color in a loop.
     atags[a].style.cssFloat = 'left';
-    atags[a].style.margin = '5px';
+    atags[a].style.marginRight = '5px';
     atags[a].style.position = 'relative';
 
     // or change some other property
@@ -163,17 +167,24 @@ if(width <=880){
 
 }
 else{
+  var array = ['tab_class','brief_intro','profile_pic','main_window_name'];
+  for (var i = 0; i < array.length; i++) {
+    document.getElementById(array[i]).style.display='block';
+}
+var array = ['project_intro','end_links','menu_icon'];
+for (var i = 0; i < array.length; i++) {
+  document.getElementById(array[i]).style.display='none';
+}
+
   document.getElementById('social_icons').style.top = '50px';
   document.getElementById('social_icons').style.left = '85%';
-  document.getElementById('tab_class').style.display='block';
-  document.getElementById('end_links').style.display='none';
-  document.getElementById('menu_icon').style.display='none';
-  document.getElementById('brief_intro').style.left  = '45%';
-  document.getElementById('brief_intro').style.display  = 'block';
-
+  document.getElementById('tab_class').style.zIndex='112';
+  document.getElementById('brief_intro').style.position  = 'absolute';
+  document.getElementById('brief_intro').style.left = '45%';
+  document.getElementById('brief_intro').style.transform = 'translate(0%)';
+  document.getElementById('project_intro').style.width='70%';
   document.getElementById('profile_pic').style.left  = '25%';
   document.getElementById('profile_pic').style.transform = 'translate(0%)';
-
   var lis = document.getElementById('social_icons').getElementsByTagName('ul');//.style.display = 'none';
   for (var i=0; i<lis.length; i++) {
   // Get all <a> children of each <li>

@@ -59,8 +59,8 @@ transition: 0.3s ease all;
 }
 
 .about{
-  height: 30%;
-  width: 30%;
+  height: 200px;
+  width: 300px;
   font-family: sans-serif;
   border-radius: 1px;
   background-color: #ffff99;
@@ -117,8 +117,8 @@ position:absolute;
 top: 20%;
 left: 50%;
 transform: translate(-50%,-50%);
-padding-bottom: 30px;
-border-bottom:2px black double;
+padding-bottom: 1%;
+border-bottom:1px black solid;
 width: 50%;
 text-align: center;
 }
@@ -156,7 +156,7 @@ color: white;
 text-align: left;
 position: absolute;
 top: 50%;
-right: 45%;
+left: 45%;
 color: white;
 font-family: sans-serif;
 padding: 20px;
@@ -248,11 +248,11 @@ list-style: none;
 }
 
 .tab_class{
-  display: none;
+display: none;
 position: fixed;
 top: 50px;
 left: 3%;
-z-index: 111;
+z-index: 0;
 }
 
 .tab_class li{
