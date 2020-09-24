@@ -103,7 +103,7 @@ scroll-behavior: auto;
 display: none;
 position: relative;
 background-image: url('https://i.postimg.cc/gJRgCqjZ/bg1.jpg');
-z-index: 111;
+z-index: -11;
 background-size: cover;
 width: 100%;
 color: black;
