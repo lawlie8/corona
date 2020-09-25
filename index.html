@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <link rel="stylesheet" href="css/master2.css">
-  <meta name="viewport" content="width=device-width,user-scalable=no"/>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
   </head>
-  <body onresize="resolution()" >
+  <body id="body_tag"  >
     <canvas id="canvas"></canvas>
 
   </body>
-  <script type="text/javascript" src="main.js">
-</script>
-<!--
-<div class="logo_start">
-<img onmouseover="about()" height="50" width="50" src="images/a.png" alt="">
-</div>
--->
+  <script type="text/javascript" src="main.js"></script>
+
+
 <div class="about" id='about'>
 <h1 id='k1'>( ͡° ͜ʖ ͡°)</h1>
 
@@ -47,8 +43,10 @@ Hobbies : Movies and Reading Books and yes Taking B&W Pictures.
 </div>
 </li>
 
-<img onclick="show_menu()" ondblclick="dont_show_menu()" id="menu_icon" src="images/menu.svg" alt="" height="30" width="30">
-
+<img onclick="show_menu()" ondblclick="dont_show_menu()" id="menu_icon" src="images/menu.svg" alt="" height="30" width="30" style="">
+<!--
+<img src="images/github.svg" onclick="show_menu()" id="menu2" alt="" height="30" width="30" >
+-->
 <div class="end_links" id="end_links">
 
 <ul>
