@@ -25,7 +25,7 @@ else{
 
   setTimeout(function () {
   greetings2(i)
-}, 15);
+}, 1500);
 
 
 }
