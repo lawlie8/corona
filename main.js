@@ -25,7 +25,7 @@ else{
 
   setTimeout(function () {
   greetings2(i)
-}, 1500);
+}, 15);
 
 
 }
@@ -173,7 +173,9 @@ for (var i = 0; i < array.length; i++) {
   document.getElementById('social_icons').style.left = '85%';
   document.getElementById('social_icons').style.transition = 'all .3s';
   document.getElementById('menu_icon').style.display='none';
+  document.getElementById('menu_icon').style.left='0px';
 
+  document.getElementById("end_links").style.width = '0px'
   document.getElementById('tab_class').style.zIndex='112';
   document.getElementById('brief_intro').style.position  = 'absolute';
   document.getElementById('brief_intro').style.left = '45%';
@@ -203,14 +205,31 @@ for (var i = 0; i < array.length; i++) {
 //setTimeout(function() { resolution() },1000);
 
 function show_menu(){
+
+
+
 var end = document.getElementById('end_links');
 end.style.display = 'block';
 end.style.position = 'absolute';
+
 document.getElementById('menu_icon').style.left  = '200px';
 document.getElementById('menu_icon').style.top  = '35px';
 document.getElementById('menu_icon').style.zIndex  = '1';
 document.getElementById('project_intro').style.zIndex  = '1110';
+document.getElementById('end_links').style.width  = '200px';
+end.style.transition = 'all .3s'
+var lis = document.getElementById('end_links').getElementsByTagName('ul');//.style.display = 'none';
+for (var i=0; i<lis.length; i++) {
+// Get all <a> children of each <li>
+var atags = lis[i].getElementsByTagName('li');
+for (var a = 0; a<atags.length; a++) {
+  // And set their color in a loop.
+  atags[a].style.display = 'block';
 
+  // or change some other property
+  //atags[a].style.height = '25%';
+}
+}
 var array = ['project_intro','tab_class','main_window_name','brief_intro','profile_pic'];
 
 for (var i = 0; i < array.length; i++) {
@@ -223,7 +242,23 @@ for (var i = 0; i < array.length; i++) {
 
 function dont_show_menu(){
 document.getElementById('menu_icon').style.left  = '0px';
-document.getElementById('end_links').style.display = 'none';
+//document.getElementById('end_links').style.display = 'none';
+document.getElementById('end_links').style.width = '0px';
+document.getElementById('end_links').style.transition = 'all .3s';
+var lis = document.getElementById('end_links').getElementsByTagName('ul');//.style.display = 'none';
+for (var i=0; i<lis.length; i++) {
+// Get all <a> children of each <li>
+var atags = lis[i].getElementsByTagName('li');
+for (var a = 0; a<atags.length; a++) {
+  // And set their color in a loop.
+  atags[a].style.display = 'none';
+
+  // or change some other property
+  //atags[a].style.height = '25%';
+}
+}
+
+
 }
 
 
