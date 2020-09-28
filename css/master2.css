@@ -96,7 +96,19 @@ transform: translate(-50%,-50%);
 }
 
 
+#visitor-counter{
+
+position: absolute;
+bottom: 0%;
+left: 0%;
+z-index: 11111111;
+width: 10px;
+
+
+}
+
 div.main_window{
+  list-style: none;
 overflow-y: auto;
 scrollbar-width:none;
 scroll-behavior: auto;

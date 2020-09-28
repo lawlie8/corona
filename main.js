@@ -1,4 +1,25 @@
 console.log('hello')
+ /*
+var php = `
+<?php
+$handle = fopen("counter.txt", "r");
+if(!$handle) {
+    echo "could not open the file";
+} else {
+    $counter =(int )fread($handle,20);
+        fclose($handle);
+        $counter++;
+        echo"Number of visitors to this page so far: ". $counter . "" ;
+    $handle = fopen("counter.txt", "w" );
+
+    fwrite($handle,$counter);
+    fclose ($handle);
+}
+?>
+`
+document.getElementById('visitor-counter').innerHTML = php;
+*/
+
 var canvas = document.querySelector('canvas');
 console.log(canvas)
 canvas.width = window.innerWidth;
@@ -79,6 +100,8 @@ function start1(){
 }
 
 function start2(){
+
+
 document.getElementById('canvas').style.display = 'none';
 document.getElementById('about').style.display = 'none';
 document.getElementById('click_me').style.display = 'none';
