@@ -154,6 +154,7 @@ var width = window.innerWidth;
 if(width <=1100){
 
   document.getElementById('social_icons').style.top = '5px';
+ document.getElementById('social_icons').style.width = '210px';
   document.getElementById('social_icons').style.left = '50%';
   document.getElementById('social_icons').style.transform = 'translate(-50%)';
   document.getElementById('tab_class').style.display='none';
